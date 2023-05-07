@@ -1,0 +1,37 @@
+<template>
+    <div class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <div class="slds-media slds-media--center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <lightning-icon icon-name="custom:custom19" size="medium"></lightning-icon>
+                </div>
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title slds-text-heading--small">Latest Reviews</h2>
+                </div>
+            </div>
+        </div>
+        <div class="slds-card__body">
+            <template if:true={reviews}>
+                <template for:each={reviews} for:item="review">
+                    <div key={review.Id} class="slds-p-around_small slds-border_bottom">
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-2 slds-p-vertical_small">
+                                <p>{review.Project__r.Name}</p>
+                                <p>{review.Project__r.Start_Date__c}</p>
+                                <p>{review.Project__r.Location__c}</p>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2 slds-p-vertical_small">
+                                <p>Teamwork: {review.Teamwork_Rate__c}</p>
+                                <p>Professionalism: {review.Professionalism_Rate__c}</p>
+                                <p>Reliability: {review.Reliability_Rate__c}</p>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </template>
+            <template if:false={reviews}>
+                <p>No reviews found.</p>
+            </template>
+        </div>
+    </div>
+</template>

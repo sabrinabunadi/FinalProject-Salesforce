@@ -1,0 +1,25 @@
+<aura:component controller="SuggestedFreelanceController">
+    <aura:attribute name="freelances" type="Freelancer__c[]"/>
+    <table class="slds-table slds-table_bordered slds-table_striped">
+        <thead>
+            <tr class="slds-text-title_caps">
+                <th scope="col"><div class="slds-truncate">Full Name</div></th>
+                <th scope="col"><div class="slds-truncate">Hourly Rate</div></th>
+                <th scope="col"><div class="slds-truncate">Location</div></th>
+                <th scope="col"><div class="slds-truncate">Overall Rate</div></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.freelances}" var="freelance">
+                <tr>
+                    <td>{!freelance.Name}</td>
+                    <td>{!freelance.Hourly_Rate__c}</td>
+                    <td>{!freelance.Location__c}</td>
+                    <td>{!freelance.Overall_Rate__c}</td>
+                    <td><button class="slds-button slds-button_brand" onclick="{!c.createFreelanceInProject}">Create Freelance In Project</button></td>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+</aura:component>

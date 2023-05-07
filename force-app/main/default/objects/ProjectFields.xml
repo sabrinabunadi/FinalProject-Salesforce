@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Project__c.Name__c</fullName>
+        <label>Project Name</label>
+        <type>Text</type>
+        <length>255</length>
+    </fields>
+    <fields>
+        <fullName>Project__c.Status__c</fullName>
+        <label>Status</label>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Planned</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>In_Progress</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cancelled</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Project__c.Description__c</fullName>
+        <label>Description</label>
+        <type>LongTextArea</type>
+        <inlineHelpText>This is the project description</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Project__c.Electricity__c</fullName>
+        <label>Electricity</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Project__c.Mechanical__c</fullName>
+        <label>Mechanical</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Project__c.Driving_License__c</fullName>
+        <label>Driving License</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Project__c.Cargo_Shipment__c</fullName>
+        <label>Cargo Shipment</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Project__c.Estimated_Time__c</fullName>
+        <label>Estimated time in days</label>
+        <type>Number</type>
+        <precision>18</precision>
+        <scale>0</scale>
+    </fields>
+    <fields>
+        <fullName>Project__c.Max_Hourly_Rate__c</fullName>
+        <label>Max Hourly Rate</label>
+        <type>Currency</type>
+        <precision>18</precision>
+        <scale>2</scale>
+    </fields>
+    <fields>
+        <fullName>Project__c.Location__c</fullName>
+        <label>Location</label>
+        <type>Picklist</type>
+        <picklist>
+            <picklistValues>
+                <fullName>Tel Aviv</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jerusalem</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Haifa</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+    </fields>
+   <fields>
+    <fullName>Project__c.Location__c</fullName>
+    <label>Location</label>
+    <type>Picklist</type>
+    <picklist>
+        <picklistValues>
+            <fullName>Tel Aviv</fullName>
+            <default>false</default>
+        </picklistValues>
+        <picklistValues>
+            <fullName>Jerusalem</fullName>
+            <default>false</default>
+        </picklistValues>
+        <picklistValues>
+            <fullName>Haifa</fullName>
+            <default>false</default>
+        </picklistValues>
+        <sorted>false</sorted>
+    </picklist>
+</fields>
+</CustomObject>
