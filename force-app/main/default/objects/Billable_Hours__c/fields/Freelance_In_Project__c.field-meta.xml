@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Freelance_In_Project__c</fullName>
+    <externalId>false</externalId>
+    <label>Freelance In Project</label>
+    <type>Lookup</type>
+    <referenceTo>Freelance_in_project__c</referenceTo>
+    <relationshipName>FreelanceInProjectRelationship</relationshipName>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cargo_Shipment__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Cargo Shipment</description>
+    <inlineHelpText>Cargo Shipment</inlineHelpText>
+    <label>Cargo Shipment</label>
+    <type>Checkbox</type>
+</CustomField>

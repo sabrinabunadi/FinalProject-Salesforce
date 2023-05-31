@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Suggested Freelance" icon-name="standard:groups">
+        <lightning-datatable
+            data={freelanceData}
+            columns={columns}
+            key-field="Id"
+            onrowaction={handleRowAction}
+        ></lightning-datatable>
+    </lightning-card>
+</template>

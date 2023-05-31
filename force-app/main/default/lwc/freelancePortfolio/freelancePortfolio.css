@@ -1,0 +1,47 @@
+.review-container {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #dcdcdc;
+    border-radius: 0.5rem;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.project-name {
+    font-weight: bold;
+}
+
+.project-details {
+    display: flex;
+    align-items: center;
+}
+
+.project-start-date,
+.project-location {
+    margin-right: 1rem;
+}
+
+.review-ratings {
+    display: flex;
+}
+
+.rating-item {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.rating-label {
+    margin-right: 0.5rem;
+}
+
+.no-reviews-message {
+    text-align: center;
+    color: #777777;
+    margin-top: 1rem;
+}

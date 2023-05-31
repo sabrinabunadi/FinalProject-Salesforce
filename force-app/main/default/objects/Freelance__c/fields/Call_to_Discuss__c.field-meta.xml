@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Call_to_Discuss__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Call to Discuss</description>
+    <inlineHelpText>Call to Discuss</inlineHelpText>
+    <label>Call to Discuss</label>
+    <type>Checkbox</type>
+</CustomField>

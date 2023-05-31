@@ -1,37 +1,36 @@
 <template>
-    <div class="slds-card">
-        <div class="slds-card__header slds-grid">
-            <div class="slds-media slds-media--center slds-has-flexi-truncate">
-                <div class="slds-media__figure">
-                    <lightning-icon icon-name="custom:custom19" size="medium"></lightning-icon>
-                </div>
-                <div class="slds-media__body">
-                    <h2 class="slds-card__header-title slds-text-heading--small">Latest Reviews</h2>
-                </div>
-            </div>
-        </div>
-        <div class="slds-card__body">
-            <template if:true={reviews}>
-                <template for:each={reviews} for:item="review">
-                    <div key={review.Id} class="slds-p-around_small slds-border_bottom">
-                        <div class="slds-grid slds-wrap">
-                            <div class="slds-col slds-size_1-of-2 slds-p-vertical_small">
-                                <p>{review.Project__r.Name}</p>
-                                <p>{review.Project__r.Start_Date__c}</p>
-                                <p>{review.Project__r.Location__c}</p>
+    <lightning-card title="Freelance Portfolio">
+        <template if:true={reviews.length}>
+            <template for:each={reviews} for:item="review">
+                <div key={review.Id} class="review-container">
+                    <div class="review-header">
+                        <div class="project-name">{review.Project_Name__c}</div>
+                        <div class="project-details">
+                            <div class="project-start-date">
+                                Start Date: {review.Project_Start_Date__c}
                             </div>
-                            <div class="slds-col slds-size_1-of-2 slds-p-vertical_small">
-                                <p>Teamwork: {review.Teamwork_Rate__c}</p>
-                                <p>Professionalism: {review.Professionalism_Rate__c}</p>
-                                <p>Reliability: {review.Reliability_Rate__c}</p>
-                            </div>
+                            <div class="project-location">Location: {review.Project_Location__c}</div>
                         </div>
                     </div>
-                </template>
+                    <div class="review-ratings">
+                        <div class="rating-item">
+                            <div class="rating-label">Teamwork:</div>
+                            <div class="rating-value">{review.Teamwork_Rate__c}</div>
+                        </div>
+                        <div class="rating-item">
+                            <div class="rating-label">Professionalism:</div>
+                            <div class="rating-value">{review.Professionalism_Rate__c}</div>
+                        </div>
+                        <div class="rating-item">
+                            <div class="rating-label">Reliability:</div>
+                            <div class="rating-value">{review.Reliability_Rate__c}</div>
+                        </div>
+                    </div>
+                </div>
             </template>
-            <template if:false={reviews}>
-                <p>No reviews found.</p>
-            </template>
-        </div>
-    </div>
+        </template>
+        <template if:false={reviews.length}>
+            <div class="no-reviews-message">No reviews available.</div>
+        </template>
+    </lightning-card>
 </template>

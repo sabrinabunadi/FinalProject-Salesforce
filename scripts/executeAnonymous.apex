@@ -1,5 +1,0 @@
-//CustomObjectCreator.createCustomObjects();
-FreelancerFieldCreator.createCustomFields();
-
-
-
